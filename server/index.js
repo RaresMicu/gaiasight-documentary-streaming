@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
@@ -15,6 +16,8 @@ mongoose
     console.log("DB connected");
   })
   .catch((err) => console.log(err));
+
+app.use(cors());
 
 app.use(express.json());
 
