@@ -1,0 +1,3 @@
+[submodule "video-streaming-app"]
+	path = video-streaming-app
+	url = https://github.com/RaresMicu/video-streaming-app
