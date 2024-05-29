@@ -7,6 +7,7 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const docRoute = require("./routes/documentaries");
 const listRoute = require("./routes/lists");
+const generatorRoute = require("./routes/generator");
 
 dotenv.config();
 
@@ -28,6 +29,8 @@ app.use("/api/users", userRoute);
 app.use("/api/documentaries", docRoute);
 
 app.use("/api/lists", listRoute);
+
+app.use("/api/generate-hls", generatorRoute);
 
 app.listen(8800, () => {
   console.log("Server is running.");
